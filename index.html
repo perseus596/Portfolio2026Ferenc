@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferenc Paczka - Digital Artist & AI Creative Technologist</title>
+    <title>Ferenc Paczka - AI & Photo Retouching Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -22,9 +22,8 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             padding: 40px 20px;
             position: relative;
             overflow: hidden;
@@ -35,212 +34,244 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.03) 2px, rgba(0, 255, 255, 0.03) 4px);
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(147, 197, 114, 0.1) 0%, transparent 50%);
             pointer-events: none;
-            animation: scanlines 8s linear infinite;
         }
 
-        @keyframes scanlines {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(20px); }
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 40px;
+        .logo-container {
             position: relative;
-            animation: float 3s ease-in-out infinite;
+            margin-bottom: 40px;
+            z-index: 1;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        .logo-circles {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .profile-image::before {
-            content: '';
+        .circle {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 4px solid #00ffff;
             border-radius: 50%;
-            box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
-            animation: pulse 2s ease-in-out infinite;
+            border: 2px solid;
+            animation: pulse 3s ease-in-out infinite;
         }
 
-        .profile-image::after {
-            content: '';
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            width: calc(100% - 24px);
-            height: calc(100% - 24px);
-            border: 3px solid #9fbd9f;
-            border-radius: 50%;
-            box-shadow: 0 0 30px rgba(159, 189, 159, 0.6);
-            animation: pulse 2s ease-in-out infinite;
-            animation-delay: 0.3s;
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            border-color: #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), inset 0 0 20px rgba(0, 255, 255, 0.2);
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
-            }
-            50% {
-                box-shadow: 0 0 60px rgba(0, 255, 255, 1);
-            }
+        .circle-2 {
+            width: 160px;
+            height: 160px;
+            border-color: #93c572;
+            box-shadow: 0 0 15px rgba(147, 197, 114, 0.5), inset 0 0 15px rgba(147, 197, 114, 0.2);
+            animation-delay: 0.5s;
         }
 
         .initials {
             position: relative;
-            z-index: 2;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
+            font-size: 72px;
             font-weight: bold;
-            color: #00ffff;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+            background: linear-gradient(135deg, #00ffff 0%, #93c572 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            z-index: 2;
+            letter-spacing: 8px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 1;
         }
 
         h1 {
-            font-size: 56px;
-            color: #00ffff;
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            letter-spacing: 2px;
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00ffff 0%, #93c572 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            font-size: 20px;
-            color: #9fbd9f;
+            font-size: 1.4em;
+            color: #93c572;
             margin-bottom: 30px;
-            letter-spacing: 3px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .section {
-            margin-bottom: 100px;
-        }
-
-        .section-title {
-            font-size: 36px;
-            color: #00ffff;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .content-box {
-            background: rgba(15, 20, 40, 0.6);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .content-box:hover {
-            border-color: #00ffff;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-        }
-
-        .content-box h3 {
-            color: #9fbd9f;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .content-box p {
-            color: #c0c0c0;
-            line-height: 1.8;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category {
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
             background: rgba(0, 255, 255, 0.05);
             border: 1px solid rgba(0, 255, 255, 0.2);
             border-radius: 10px;
-            padding: 25px;
+            display: inline-block;
         }
 
-        .skill-category h4 {
+        .contact-info a {
             color: #00ffff;
-            margin-bottom: 15px;
-            font-size: 18px;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: all 0.3s;
         }
 
-        .skill-category ul {
-            list-style: none;
-            padding-left: 0;
+        .contact-info a:hover {
+            color: #93c572;
+            text-shadow: 0 0 10px rgba(147, 197, 114, 0.5);
         }
 
-        .skill-category li {
-            color: #9fbd9f;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(159, 189, 159, 0.1);
+        .section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .skill-category li:last-child {
-            border-bottom: none;
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #00ffff 0%, #93c572 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .gallery-container {
-            background: rgba(15, 20, 40, 0.6);
-            border: 2px solid rgba(0, 255, 255, 0.3);
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
             border-radius: 10px;
-            padding: 40px;
-            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
         }
 
-        .before-after-slider {
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffff;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .video-embed {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .video-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-info h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #b0b0b0;
+            font-size: 0.95em;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .app-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(147, 197, 114, 0.3);
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: #93c572;
+            box-shadow: 0 10px 30px rgba(147, 197, 114, 0.3);
+        }
+
+        .app-card h3 {
+            color: #93c572;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .app-card p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+        }
+
+        .app-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(147, 197, 114, 0.1);
+            border: 1px solid #93c572;
+            border-radius: 5px;
+            color: #93c572;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .app-link:hover {
+            background: rgba(147, 197, 114, 0.2);
+            box-shadow: 0 0 15px rgba(147, 197, 114, 0.4);
+        }
+
+        .portfolio-gallery {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .slider-container {
             position: relative;
             width: 100%;
             max-width: 800px;
-            margin: 0 auto 30px;
-            overflow: hidden;
+            margin: 0 auto 60px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
             border-radius: 10px;
+            overflow: hidden;
+            background: #1a1a1a;
         }
 
-        .slider-images {
+        .slider-wrapper {
             position: relative;
             width: 100%;
-            height: 600px;
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-        }
-
-        .slider-before,
-        .slider-after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
+            height: 500px;
+            overflow: hidden;
         }
 
         .slider-before {
@@ -274,6 +305,15 @@
             object-fit: cover;
         }
 
+        .slider-before,
+        .slider-after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         .slider-handle {
             position: absolute;
             top: 0;
@@ -283,36 +323,36 @@
             background: #00ffff;
             cursor: ew-resize;
             z-index: 10;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
         }
 
         .slider-handle::before {
-            content: '◄►';
+            content: '';
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
             background: #00ffff;
-            color: #0a0a0a;
-            padding: 10px 15px;
-            border-radius: 50px;
-            font-weight: bold;
+            border-radius: 50%;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
         }
 
         .project-info {
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
+            background: rgba(0, 255, 255, 0.05);
         }
 
         .project-info h3 {
             color: #00ffff;
-            font-size: 24px;
             margin-bottom: 10px;
+            font-size: 1.3em;
         }
 
         .project-info p {
-            color: #9fbd9f;
+            color: #b0b0b0;
         }
 
         .gallery-nav {
@@ -323,522 +363,258 @@
         }
 
         .nav-btn {
+            padding: 10px 30px;
             background: rgba(0, 255, 255, 0.1);
-            border: 2px solid #00ffff;
+            border: 1px solid #00ffff;
             color: #00ffff;
-            padding: 12px 30px;
-            border-radius: 50px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 1em;
         }
 
         .nav-btn:hover {
-            background: rgba(0, 255, 255, 0.3);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            transform: translateY(-2px);
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
         }
 
-        .project-counter {
-            text-align: center;
-            color: #9fbd9f;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .video-card {
-            background: rgba(15, 20, 40, 0.6);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .video-card:hover {
-            border-color: #00ffff;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 48px;
-        }
-
-        .video-embed {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .video-embed iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .video-info {
-            padding: 20px;
-        }
-
-        .video-info h3 {
-            color: #00ffff;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .video-info p {
-            color: #9fbd9f;
-            font-size: 14px;
-        }
-
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .app-card {
-            background: rgba(15, 20, 40, 0.6);
-            border: 1px solid rgba(159, 189, 159, 0.3);
-            border-radius: 10px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .app-card:hover {
-            border-color: #9fbd9f;
-            box-shadow: 0 0 30px rgba(159, 189, 159, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .app-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .app-card h3 {
-            color: #9fbd9f;
-            margin-bottom: 15px;
-            font-size: 22px;
-            text-align: center;
-        }
-
-        .app-card p {
-            color: #c0c0c0;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .app-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .tech-tag {
-            background: rgba(159, 189, 159, 0.2);
-            color: #9fbd9f;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            .profile-image {
-                width: 140px;
-                height: 140px;
-            }
-
-            .initials {
-                font-size: 48px;
-            }
-
-            .subtitle {
-                font-size: 14px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .slider-images {
-                height: 400px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1.1em; }
+            .section-title { font-size: 2em; }
+            .slider-wrapper { height: 300px; }
+            .initials { font-size: 48px; }
+            .logo-circles { width: 150px; height: 150px; }
+            .circle-1 { width: 150px; height: 150px; }
+            .circle-2 { width: 120px; height: 120px; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="profile-image">
-            <div class="initials">FP</div>
+    <div class="hero">
+        <div class="logo-container">
+            <div class="logo-circles">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="initials">FP</div>
+            </div>
         </div>
-        <h1>FERENC PACZKA</h1>
-        <p class="subtitle">DIGITAL ARTIST • AI CREATIVE TECHNOLOGIST</p>
-    </section>
+        <div class="hero-content">
+            <h1>Ferenc Paczka</h1>
+            <p class="subtitle">AI Commercial Production & Photo Retouching Specialist</p>
+            <p>Transforming visions into reality through cutting-edge AI technology and professional photo enhancement</p>
+            <div class="contact-info">
+                <a href="mailto:ferenc.paczka@example.com">📧 Email</a>
+                <a href="tel:+1234567890">📱 Phone</a>
+                <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+            </div>
+        </div>
+    </div>
 
-    <!-- Vision Section -->
-    <div class="container">
-        <section class="section">
-            <h2 class="section-title">Vision</h2>
-            <div class="content-box">
-                <p>As a seasoned Photoshop digital artist, I envision bridging the gap between traditional Art History and the contemporary digital landscape. By studying the masters and analyzing their techniques, I aim to infuse that kind of quality to my digital work, with a timeless quality and depth.</p>
-                <p style="margin-top: 20px;">Now, at the frontier of artificial intelligence and generative technologies, I see an unprecedented opportunity to expand the boundaries of creative expression. I approach AI not as a replacement for artistry, but as a powerful collaborator—a tool that amplifies human creativity and opens doors to possibilities we're only beginning to imagine. Staying curious and adaptable in this evolving landscape is essential to creating work that remains both relevant and revolutionary.</p>
+    <div class="section">
+        <h2 class="section-title">AI Commercial Production</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/GwAEw62Z1eY" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Campaign Video 1</h3>
+                    <p>Commercial video content created with AI technologies. [Update this description]</p>
+                </div>
             </div>
-        </section>
+            <div class="video-card">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/itoPTpd4Fms" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Campaign Video 2</h3>
+                    <p>Generative AI video production for advertising purposes. [Update this description]</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/dMbQAKV0BrE" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Campaign Video 3</h3>
+                    <p>Advanced AI-generated video content for commercial applications. [Update this description]</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-embed">
+                    <iframe src="https://www.youtube.com/embed/mGo-B488kVU" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Campaign Video 4</h3>
+                    <p>AI-powered video production. [Update this description]</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- I Believe That Section -->
-        <section class="section">
-            <h2 class="section-title">Philosophy</h2>
-            <div class="content-box">
-                <p>I believe that by understanding the evolution of art, from the Lascaux caves to the digital age we are living nowadays, I can push the boundaries of digital artistry and create works that not only resonate with modern audiences but also stand the test of time.</p>
-                <p style="margin-top: 20px;">Every technological leap—from pigments to pixels, from brushes to algorithms—has been met with both wonder and skepticism. I choose wonder. The artists who thrived weren't those who resisted new tools, but those who remained open, curious, and willing to experiment. AI and machine learning represent the latest chapter in this story, and I'm committed to exploring these technologies with the same pioneering spirit that drove the Renaissance masters to embrace oil paints and the Impressionists to work with synthetic pigments. Innovation flourishes at the intersection of tradition and transformation.</p>
+    <div class="section">
+        <h2 class="section-title">AI-Powered Applications</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <h3>🏊 LapLab</h3>
+                <p>Advanced swimming tracker application powered by AI to monitor performance, analyze technique, and provide personalized training insights.</p>
+                <a href="#" class="app-link">View Project</a>
             </div>
-        </section>
+            <div class="app-card">
+                <h3>🎨 Color Match Game</h3>
+                <p>Interactive AI-driven color matching game that challenges perception and trains visual accuracy through engaging gameplay mechanics.</p>
+                <a href="#" class="app-link">View Project</a>
+            </div>
+            <div class="app-card">
+                <h3>🌊 Endless River</h3>
+                <p>AI-powered affirmation and meditation app delivering personalized positive messages and guided relaxation experiences.</p>
+                <a href="#" class="app-link">View Project</a>
+            </div>
+            <div class="app-card">
+                <h3>💼 Portfolio Websites</h3>
+                <p>Custom AI-assisted portfolio website development showcasing creative work with modern design and optimal user experience.</p>
+                <a href="#" class="app-link">View Project</a>
+            </div>
+        </div>
+    </div>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Software</h4>
-                    <ul>
-                        <li>Adobe Photoshop Suite</li>
-                        <li>Microsoft Office</li>
-                        <li>Google Docs</li>
-                        <li>macOS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>AI & Development Tools</h4>
-                    <ul>
-                        <li>Claude AI</li>
-                        <li>ChatGPT</li>
-                        <li>Midjourney</li>
-                        <li>Runway ML</li>
-                        <li>Cursor / Bolt.new</li>
-                        <li>Stable Diffusion</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Technical Skills</h4>
-                    <ul>
-                        <li>Image Retouching</li>
-                        <li>Product Development</li>
-                        <li>Color Management</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Soft Skills</h4>
-                    <ul>
-                        <li>Strong Communication</li>
-                        <li>Problem-Solving</li>
-                        <li>Time Management</li>
-                        <li>Teamwork</li>
-                        <li>Adaptability</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Degrees Section -->
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="content-box">
-                <h3>Bachelor of Fine Arts (BFA)</h3>
-                <p>The Academy of Art University | San Francisco, CA | 2013</p>
-            </div>
-            <div class="content-box">
-                <h3>Bachelor of Fine Arts (BFA) - Focus in Painting</h3>
-                <p>La Esmeralda | Mexico City, Mexico | 2010</p>
-            </div>
-        </section>
-
-        <!-- AI Video Campaigns Section -->
-        <section class="section">
-            <h2 class="section-title">AI Video Campaigns</h2>
-            <div class="content-box">
-                <p style="margin-bottom: 30px;">Creating compelling commercial content through artificial intelligence and generative video technologies.</p>
-            </div>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/GwAEw62Z1eY" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="section">
+        <h2 class="section-title">Photo Retouching Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-before" id="sliderBefore">
+                        <img id="beforeImage" alt="Before" style="display: none;">
                     </div>
-                    <div class="video-info">
-                        <h3>AI Campaign Video 1</h3>
-                        <p>Commercial video content created with AI technologies. [Update this description]</p>
+                    <div class="slider-after" id="sliderAfter">
+                        <img id="afterImage" alt="After" style="display: none;">
                     </div>
+                    <div class="slider-handle" id="sliderHandle"></div>
                 </div>
-                <div class="video-card">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/itoPTpd4Fms" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>AI Campaign Video 2</h3>
-                        <p>Generative AI video production for advertising purposes. [Update this description]</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-embed">
-                        <iframe src="https://www.youtube.com/embed/Rp8ZGo_la-w" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3>AI Campaign Video 3</h3>
-                        <p>AI-powered commercial content showcasing creative possibilities. [Update this description]</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-placeholder">🎬</div>
-                    <div class="video-info">
-                        <h3>Campaign Video 4</h3>
-                        <p>Additional AI video campaign - coming soon.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI-Powered Applications Section -->
-        <section class="section">
-            <h2 class="section-title">AI-Powered Applications</h2>
-            <div class="content-box">
-                <p style="margin-bottom: 30px;">Custom applications built through vibecoding and AI-assisted development, showcasing full-stack capabilities.</p>
-            </div>
-            <div class="app-grid">
-                <div class="app-card">
-                    <div class="app-icon">🏊</div>
-                    <h3>LapLab</h3>
-                    <p>Swimming performance tracker with advanced analytics, lap timing, and progress visualization. Features custom workout planning and historical data management.</p>
-                    <div class="app-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Data Viz</span>
-                        <span class="tech-tag">Analytics</span>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🎮</div>
-                    <h3>Color Match Game</h3>
-                    <p>Interactive memory and color matching game with timer mechanics, scoring system, and difficulty progression. Built with engaging animations and responsive design.</p>
-                    <div class="app-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Game Logic</span>
-                        <span class="tech-tag">UI/UX</span>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">🌊</div>
-                    <h3>Endless River</h3>
-                    <p>Daily affirmations and mindfulness app featuring curated content, mood tracking, and personalized motivation system with beautiful UI design.</p>
-                    <div class="app-tech">
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">UX Design</span>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">💼</div>
-                    <h3>Portfolio Websites</h3>
-                    <p>Custom portfolio sites with modern animations, responsive layouts, and professional aesthetics. Built with Tron-inspired cyberpunk design systems.</p>
-                    <div class="app-tech">
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">Animations</span>
-                        <span class="tech-tag">Responsive</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Gallery Section -->
-        <section class="section">
-            <h2 class="section-title">Photo Retouching Portfolio</h2>
-            <div class="content-box" style="margin-bottom: 30px;">
-                <p>Welcome to my photo retouching portfolio, where creativity meets perfection. These before and after comparisons showcase my expertise in enhancing visual appeal with a focus on quality and precision for high-end clients like Meta, Apple, and Google.</p>
-            </div>
-            
-            <div class="gallery-container">
                 <div class="project-info">
                     <h3 id="projectTitle">Project Title</h3>
-                    <p id="projectDesc">Drag the slider to compare before and after</p>
-                </div>
-                
-                <div class="before-after-slider" id="slider">
-                    <div class="slider-images">
-                        <div class="slider-before"></div>
-                        <div class="slider-after" id="afterImage"></div>
-                        <div class="slider-handle" id="sliderHandle"></div>
-                    </div>
-                </div>
-
-                <div class="project-counter">
-                    <span id="currentProject">1</span> / <span id="totalProjects">6</span>
-                </div>
-
-                <div class="gallery-nav">
-                    <button class="nav-btn" onclick="previousProject()">← Previous</button>
-                    <button class="nav-btn" onclick="nextProject()">Next →</button>
+                    <p id="projectDesc">Project description</p>
                 </div>
             </div>
-        </section>
+            <div class="gallery-nav">
+                <button class="nav-btn" id="prevBtn">← Previous</button>
+                <button class="nav-btn" id="nextBtn">Next →</button>
+            </div>
+        </div>
     </div>
 
     <script>
-        // Before/After Slider Functionality
-        const slider = document.getElementById('slider');
-        const handle = document.getElementById('sliderHandle');
-        const afterImage = document.getElementById('afterImage');
-        let isDragging = false;
-
-        function updateSlider(x) {
-            const rect = slider.getBoundingClientRect();
-            const position = Math.max(0, Math.min(x - rect.left, rect.width));
-            const percentage = (position / rect.width) * 100;
-            
-            handle.style.left = percentage + '%';
-            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-        }
-
-        handle.addEventListener('mousedown', () => {
-            isDragging = true;
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                updateSlider(e.clientX);
-            }
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-
-        slider.addEventListener('click', (e) => {
-            updateSlider(e.clientX);
-        });
-
-        // Touch events for mobile
-        handle.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            e.preventDefault();
-        });
-
-        document.addEventListener('touchmove', (e) => {
-            if (isDragging) {
-                updateSlider(e.touches[0].clientX);
-            }
-        });
-
-        document.addEventListener('touchend', () => {
-            isDragging = false;
-        });
-
         // Gallery Navigation
         const projects = [
             {
                 title: "Architectural Day-to-Night Transformation",
-                description: "Dramatic lighting and atmosphere enhancement for architectural photography",
-                beforeImage: "https://i.imgur.com/kI5SBJH.jpg",
-                afterImage: "https://i.imgur.com/nyh0IYF.jpg"
+                description: "Professional architectural photography enhanced with dramatic lighting and atmosphere adjustments.",
+                before: "https://i.imgur.com/kI5SBJH.jpg",
+                after: "https://i.imgur.com/nyh0IYF.jpg"
             },
             {
-                title: "Commercial Text Removal & Clean-up",
-                description: "Professional overlay text removal and image restoration for advertising campaigns",
-                beforeImage: "https://drive.google.com/uc?export=view&id=10svjvne3xHhWaOxR6ALJbwQfhl3skYUZ",
-                afterImage: "https://drive.google.com/uc?export=view&id=1E3yGQQDCvNAbtdwKOoQbH2MoR3sbogqV"
+                title: "Urban Landscape Enhancement",
+                description: "Complete color grading and detail enhancement for stunning urban photography.",
+                before: "https://i.imgur.com/Ry37Wbc.jpg",
+                after: "https://i.imgur.com/wYO89V1.jpg"
             },
             {
-                title: "Product Lighting Enhancement",
-                description: "Chandelier visualization upgrade from standard to premium illuminated glass shades",
-                beforeImage: "https://drive.google.com/uc?export=view&id=1r0Zi2Y4ViqU0kKGX_fiuBEnZpDL9ha5W",
-                afterImage: "https://drive.google.com/uc?export=view&id=1zedSKYZ7amc7iFi4mQ8LJyzuEh5hyYIZ"
+                title: "Portrait Retouching",
+                description: "Professional portrait enhancement with natural skin retouching and color correction.",
+                before: "https://i.imgur.com/JKMxzLo.jpg",
+                after: "https://i.imgur.com/m1QD9Ge.jpg"
             },
             {
-                title: "Interior Color Variations",
-                description: "Custom pillow color and texture modifications for lifestyle furniture photography",
-                beforeImage: "https://drive.google.com/uc?export=view&id=1slHnCvlXXGvLX8PwHh7FcYeQq4AidwbV",
-                afterImage: "https://drive.google.com/uc?export=view&id=1pJQYQ-LF9Nsibp575TlcmiAT6t3vf1Zq"
+                title: "Fashion Editorial Enhancement",
+                description: "High-end fashion photography retouching with attention to detail and color harmony.",
+                before: "https://i.imgur.com/bKhfZ3T.jpg",
+                after: "https://i.imgur.com/V75rgXN.jpg"
             },
             {
-                title: "Lifestyle Product Swaps",
-                description: "Seamless lamp replacement and lighting enhancement for bedroom staging photography",
-                beforeImage: "https://drive.google.com/uc?export=view&id=16HpPytCrfMeqvAdIfQ0HlyAbkX8g9wh3",
-                afterImage: "https://drive.google.com/uc?export=view&id=1ORsvK-xsmMfb9MsS3nhsLxxy64ROK90G"
+                title: "Product Photography Perfection",
+                description: "Commercial product shot optimization with precise color correction and background cleanup.",
+                before: "https://i.imgur.com/dxR9Cqz.jpg",
+                after: "https://i.imgur.com/xZP8QmW.jpg"
             },
             {
-                title: "Furniture Transformation",
-                description: "Complete sofa texture and material conversion for design visualization",
-                beforeImage: "https://drive.google.com/uc?export=view&id=1TDpntGgVmIvfJQlbodqWL_vMBvxSZDKx",
-                afterImage: "https://drive.google.com/uc?export=view&id=1HDSA3MAHBTab9pGf7ds7IOx1c95y-I6-"
+                title: "Lifestyle Photography Enhancement",
+                description: "Natural light optimization and mood enhancement for lifestyle photography.",
+                before: "https://i.imgur.com/9tYvHsK.jpg",
+                after: "https://i.imgur.com/LqNx5Pm.jpg"
             }
         ];
 
-        let currentProjectIndex = 0;
-        const sliderBefore = document.querySelector('.slider-before');
-        const sliderAfter = document.querySelector('.slider-after');
+        let currentProject = 0;
+        let isDragging = false;
+
+        const sliderHandle = document.getElementById('sliderHandle');
+        const sliderAfter = document.getElementById('sliderAfter');
+        const sliderBefore = document.getElementById('sliderBefore');
+        const beforeImage = document.getElementById('beforeImage');
+        const afterImage = document.getElementById('afterImage');
+        const projectTitle = document.getElementById('projectTitle');
+        const projectDesc = document.getElementById('projectDesc');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
 
         function updateProject() {
-            const project = projects[currentProjectIndex];
-            document.getElementById('projectTitle').textContent = project.title;
-            document.getElementById('projectDesc').textContent = project.description;
-            document.getElementById('currentProject').textContent = currentProjectIndex + 1;
-            document.getElementById('totalProjects').textContent = projects.length;
+            const project = projects[currentProject];
+            projectTitle.textContent = project.title;
+            projectDesc.textContent = project.description;
             
-            // Update images
-            if (project.beforeImage && project.afterImage) {
-                sliderBefore.innerHTML = `<img src="${project.beforeImage}" alt="Before">`;
-                sliderAfter.innerHTML = `<img src="${project.afterImage}" alt="After">`;
-                sliderBefore.classList.add('has-image');
-                sliderAfter.classList.add('has-image');
-            } else {
-                sliderBefore.innerHTML = '<span style="font-size: 24px; color: #666;">BEFORE IMAGE<br>Replace with your actual image</span>';
-                sliderAfter.innerHTML = '<span style="font-size: 24px; color: #888;">AFTER IMAGE<br>Replace with your actual image</span>';
-                sliderBefore.classList.remove('has-image');
-                sliderAfter.classList.remove('has-image');
+            beforeImage.src = project.before;
+            afterImage.src = project.after;
+            beforeImage.style.display = 'block';
+            afterImage.style.display = 'block';
+            
+            sliderBefore.classList.add('has-image');
+            sliderAfter.classList.add('has-image');
+            
+            prevBtn.disabled = currentProject === 0;
+            nextBtn.disabled = currentProject === projects.length - 1;
+        }
+
+        function updateSlider(x) {
+            const rect = sliderBefore.getBoundingClientRect();
+            const position = Math.max(0, Math.min(x - rect.left, rect.width));
+            const percentage = (position / rect.width) * 100;
+            
+            sliderHandle.style.left = percentage + '%';
+            sliderAfter.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        }
+
+        sliderHandle.addEventListener('mousedown', () => isDragging = true);
+        document.addEventListener('mouseup', () => isDragging = false);
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) updateSlider(e.clientX);
+        });
+
+        sliderHandle.addEventListener('touchstart', () => isDragging = true);
+        document.addEventListener('touchend', () => isDragging = false);
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) updateSlider(e.touches[0].clientX);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentProject > 0) {
+                currentProject--;
+                updateProject();
             }
-            
-            // Reset slider position
-            handle.style.left = '50%';
-            afterImage.style.clipPath = 'inset(0 50% 0 0)';
-        }
+        });
 
-        function nextProject() {
-            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-            updateProject();
-        }
+        nextBtn.addEventListener('click', () => {
+            if (currentProject < projects.length - 1) {
+                currentProject++;
+                updateProject();
+            }
+        });
 
-        function previousProject() {
-            currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
-            updateProject();
-        }
-
-        // Initialize
         updateProject();
     </script>
 </body>
