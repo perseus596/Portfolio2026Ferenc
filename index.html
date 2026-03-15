@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)file:///Users/Ferenc/Downloads/index_3.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Ferenc Paczka - Digital Artist &amp; Photo Retoucher</title>
+    <title>Ferenc Paczka - Digital Artist & Photo Retoucher</title>
     <style>
         * {
             margin: 0;
@@ -196,33 +196,33 @@
 
         .app-card {
             border: 2px solid #00ffff;
-            padding: 30px;
+            padding: 40px;
             background: rgba(0, 255, 255, 0.05);
             text-align: center;
             transition: all 0.3s;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
         }
 
         .app-card:hover {
-            box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
         }
 
         .app-card h3 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ffff;
         }
 
         .app-card p {
             color: #00cccc;
-            margin-bottom: 25px;
-            line-height: 1.6;
+            margin-bottom: 30px;
+            line-height: 1.8;
         }
 
         .app-card a {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 15px 40px;
             border: 2px solid #00ffff;
             color: #00ffff;
             text-decoration: none;
@@ -234,39 +234,36 @@
         .app-card a:hover {
             background: #00ffff;
             color: #000;
-            box-shadow: 0 0 20px #00ffff;
+            box-shadow: 0 0 30px #00ffff;
         }
 
-        /* iOS Apps Grid */
+        /* iOS Apps Section */
         .ios-app-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            justify-items: center;
         }
 
         .ios-app-card {
             border: 2px solid #00ffff;
-            padding: 30px;
+            padding: 40px;
             background: rgba(0, 255, 255, 0.05);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-            transition: all 0.3s;
             text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
             text-decoration: none;
             display: block;
-            max-width: 320px;
         }
 
         .ios-app-card:hover {
-            box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
-            transform: translateY(-5px);
-            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
         }
 
         .ios-app-icon {
             width: 120px;
             height: 120px;
-            border-radius: 22px;
+            border-radius: 24px;
             margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
@@ -274,51 +271,45 @@
         .ios-app-card h3 {
             font-size: 24px;
             color: #00ffff;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #00ffff;
         }
 
         .ios-app-card p {
             color: #00cccc;
-            font-size: 14px;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .app-store-badge {
             display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid #00ffff;
+            padding: 12px 30px;
+            border: 2px solid #00ffff;
             color: #00ffff;
-            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 12px;
             transition: all 0.3s;
         }
 
         .ios-app-card:hover .app-store-badge {
             background: #00ffff;
             color: #000;
+            box-shadow: 0 0 30px #00ffff;
         }
 
-        /* Photo Retouching Portfolio */
+        /* Portfolio Grid */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
         }
 
         .portfolio-item {
             border: 2px solid #00ffff;
-            padding: 25px;
+            padding: 20px;
             background: rgba(0, 255, 255, 0.05);
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-            transition: all 0.3s;
-        }
-
-        .portfolio-item:hover {
-            box-shadow: 0 0 50px rgba(0, 255, 255, 0.4);
-            transform: translateY(-5px);
         }
 
         .image-comparison {
@@ -327,7 +318,6 @@
             height: 400px;
             overflow: hidden;
             cursor: ew-resize;
-            background: #000;
         }
 
         .image-comparison img {
@@ -351,8 +341,8 @@
             height: 100%;
             background: #00ffff;
             box-shadow: 0 0 10px #00ffff;
+            transform: translateX(-50%);
             z-index: 10;
-            pointer-events: none;
         }
 
         .slider-handle {
@@ -365,13 +355,13 @@
             background: #000;
             border: 3px solid #00ffff;
             border-radius: 50%;
-            box-shadow: 0 0 20px #00ffff;
-            pointer-events: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
             color: #00ffff;
+            font-size: 20px;
+            box-shadow: 0 0 20px #00ffff;
+            z-index: 11;
         }
 
         /* Footer */
@@ -380,7 +370,7 @@
             padding: 60px 20px;
             border-top: 1px solid #00ffff;
             margin-top: 100px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
         }
 
         footer p {
@@ -391,11 +381,8 @@
         /* Responsive */
         @media (max-width: 768px) {
             h1 { font-size: 32px; letter-spacing: 4px; }
-            .section-title { font-size: 28px; }
-            .video-grid { grid-template-columns: 1fr; }
-            .app-grid { grid-template-columns: 1fr; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            nav a { margin: 10px 15px; font-size: 14px; }
+            nav a { margin: 10px; font-size: 14px; }
+            .video-grid, .portfolio-grid { grid-template-columns: 1fr; }
             .logo-container { width: 200px; height: 200px; }
             .initials { font-size: 48px; }
         }
@@ -414,10 +401,10 @@
         </header>
 
         <nav>
-            <a href="file:///Users/Ferenc/Downloads/index_3.html#ai-commercial">AI Commercial Production</a>
-            <a href="file:///Users/Ferenc/Downloads/index_3.html#ai-apps">AI-Powered Applications</a>
-            <a href="file:///Users/Ferenc/Downloads/index_3.html#ios-apps">iOS Apps</a>
-            <a href="file:///Users/Ferenc/Downloads/index_3.html#photo-retouching">Photo Retouching</a>
+            <a href="#ai-commercial">AI Commercial Production</a>
+            <a href="#ai-apps">AI-Powered Applications</a>
+            <a href="#ios-apps">iOS Apps</a>
+            <a href="#photo-retouching">Photo Retouching</a>
         </nav>
 
         <!-- AI Commercial Production -->
@@ -426,27 +413,33 @@
             <div class="video-grid">
                 <div class="video-item">
                     <div class="video-wrapper">
-                        <iframe src="./index_files/GwAEw62Z1eY.html" title="Mezcalli Chitó - Zócalo México" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                        <iframe src="https://www.youtube.com/embed/GwAEw62Z1eY" 
+                                title="Mezcal Chito Runaway Truck"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
                     </div>
-                    <div class="video-title">Mexicalli Chito Mezcal Ad #1 - Zocalo</div>
+                    <div class="video-title">Mezcal Chito - Runaway Truck</div>
                 </div>
                 <div class="video-item">
                     <div class="video-wrapper">
-                        <iframe src="./index_files/itoPTpd4Fms.html" title="AI Fashion Commercial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                        <iframe src="https://www.youtube.com/embed/itoPTpd4Fms" 
+                                title="Mezcal Chito Ad #3"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
                     </div>
-                    <div class="video-title">Mexicalli Chito Mezcal Ad #2 - Mariachis</div>
+                    <div class="video-title">Mezcal Chito Ad #3</div>
                 </div>
                 <div class="video-item">
                     <div class="video-wrapper">
-                        <iframe src="./index_files/Rp8ZGo_la-w.html" title="AI Product Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                        <iframe src="https://www.youtube.com/embed/Rp8ZGo_la-w" 
+                                title="Mezcal Chito Ad #4a"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
                     </div>
-                    <div class="video-title">Mexicalli Chito Mezcal Ad #3 - Wise Man</div>
-                </div>
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="./index_files/mGo-B488kVU.html" title="AI Brand Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-                    </div>
-                    <div class="video-title">Mexicalli Chito Mezcal Ad #4 - Border Crossing</div>
+                    <div class="video-title">Mezcal Chito Ad #4a</div>
                 </div>
             </div>
         </section>
@@ -457,7 +450,7 @@
             <div class="app-grid">
                 <div class="app-card">
                     <h3>LapLab</h3>
-                    <p>Swimming &amp; Gym Tracker with AI-powered progress analytics</p>
+                    <p>Swimming & Gym Tracker with AI-powered progress analytics</p>
                     <a href="https://perseus596.github.io/LapLab/" target="_blank">View Project</a>
                 </div>
                 <div class="app-card">
@@ -479,13 +472,13 @@
             <h2 class="section-title">iOS Apps</h2>
             <div class="ios-app-grid">
                 <a href="https://apps.apple.com/us/app/oneendlessriver/id6756772160" target="_blank" class="ios-app-card">
-                    <img src="./index_files/Endless River 1024.png" alt="OneEndlessRiver" class="ios-app-icon">
+                    <img src="https://raw.githubusercontent.com/perseus596/Portfolio2026Ferenc/main/Endless%20River%201024.png" alt="OneEndlessRiver" class="ios-app-icon">
                     <h3>OneEndlessRiver</h3>
-                    <p>Daily affirmations for confidence, stress relief &amp; positive thinking</p>
+                    <p>Daily affirmations for confidence, stress relief & positive thinking</p>
                     <span class="app-store-badge">Available on the App Store</span>
                 </a>
                 <a href="https://apps.apple.com/mx/app/rio-eterno/id6757117750?l=en-GB" target="_blank" class="ios-app-card">
-                    <img src="./index_files/Endless River 1024.png" alt="Rio Eterno" class="ios-app-icon">
+                    <img src="https://raw.githubusercontent.com/perseus596/Portfolio2026Ferenc/main/Endless%20River%201024.png" alt="Rio Eterno" class="ios-app-icon">
                     <h3>Rio Eterno</h3>
                     <p>Afirmaciones diarias para hispanohablantes</p>
                     <span class="app-store-badge">Disponible en App Store</span>
@@ -500,8 +493,8 @@
                 <!-- Project 1 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="0">
-                        <img referrerpolicy="no-referrer" src="./index_files/22_1026 England - Back Facade_Perspective After.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/22_1026 England - Back Facade_Perspective Before.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1YWMieKB2SEXB8ybT2EoeEgth0AVjPAnE&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1NHbZz8w77cgXdnkzGN8jtAcvdZsamWSq&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -510,8 +503,8 @@
                 <!-- Project 2 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="1">
-                        <img referrerpolicy="no-referrer" src="./index_files/Column Table lamp hero After.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/Column Table lamp hero Before.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1Et8YDLiBhuLoEDvo32QBhVjwgxRyg-Dv&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=19lE2ESxAbaaY4DEHhh9GvU6j9lm7_Uq8&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -520,8 +513,8 @@
                 <!-- Project 3 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="2">
-                        <img referrerpolicy="no-referrer" src="./index_files/Dries Pillars Round Chandelier fabric shade to Crystal After.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/Dries Pillars Round Chandelier fabric shade to Crystal Before.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1CqipcQSMN3a7Jy_DeIUzHNiJE5rqOvGU&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1gZKadIro1J2lxQwDYCENx6HwkWTsP_-i&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -530,8 +523,8 @@
                 <!-- Project 4 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="3">
-                        <img referrerpolicy="no-referrer" src="./index_files/Ellis Hero shot Before.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/Ellis Hero shot After.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1HojSvmraKflfPEnecwPxqxCrZk1LsRTr&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1tORgJbgJoeTEXhpBo6g5GQ8ymwqK9Mbc&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -540,8 +533,8 @@
                 <!-- Project 5 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="4">
-                        <img referrerpolicy="no-referrer" src="./index_files/Hero Screen Shot 2023-02-08 at 5.04.51 PM SOFA Before.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/Hero Screen Shot 2023-02-08 at 5.04.51 PM1 SOFA After.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=19Jbcxl0UQG2W1eS2ulUZsQsnLchIg0tV&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=10AajM8WVd0lrBwH32Q5CBeO0Fss4K_C6&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -550,8 +543,8 @@
                 <!-- Project 6 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="5">
-                        <img referrerpolicy="no-referrer" src="./index_files/OriginalLancasterLeatherSofa Before.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/OriginalLancasterLeatherSofa After.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1-He5FAYRxqlcN5ePCvjQN6wRe184Qa7U&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1Wr61XSwN67LFmy-Ku_2Etk_gfOnBvdjh&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -560,8 +553,8 @@
                 <!-- Project 7 -->
                 <div class="portfolio-item">
                     <div class="image-comparison" data-index="6">
-                        <img referrerpolicy="no-referrer" src="./index_files/RH Manhasset_FRONT ELEVATION copy_v2a BEFORE.jpg" alt="Before" class="image-before">
-                        <img referrerpolicy="no-referrer" src="./index_files/RH Manhasset_FRONT ELEVATION copy_v2a AFTER.jpg" alt="After" class="image-after">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=1m3smucKXK5yWeK2O2Bv958g87kaJ-21r&sz=s4000" alt="Before" class="image-before">
+                        <img referrerpolicy="no-referrer" src="https://drive.google.com/thumbnail?id=10At5n_DYRDjbJ_IxWhgcLU-3qAHnzsMK&sz=s4000" alt="After" class="image-after">
                         <div class="slider-line"></div>
                         <div class="slider-handle">↔</div>
                     </div>
@@ -570,7 +563,7 @@
         </section>
 
         <footer>
-            <p>© 2026 Ferenc Paczka | Digital Artist | Photo Retoucher | AI Developer</p>
+            <p>&copy; 2026 Ferenc Paczka | Digital Artist | Photo Retoucher | AI Developer</p>
             <p style="margin-top: 10px; font-size: 14px;">BFA Academy of Art University SF | BFA La Esmeralda México</p>
         </footer>
     </div>
@@ -632,6 +625,5 @@
             });
         });
     </script>
-
-
-</body></html>
+</body>
+</html>
