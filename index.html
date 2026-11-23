@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Ferenc Paczka - Digital Artist & Photo Retoucher</title>
+    <title>Ferenc Paczka | Senior Image Specialist | iOS & macOS Developer</title>
     <style>
         * {
             margin: 0;
@@ -99,7 +99,7 @@
         nav a {
             color: #00ffff;
             text-decoration: none;
-            margin: 0 30px;
+            margin: 0 15px;
             font-size: 18px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -314,6 +314,24 @@
             z-index: 11;
         }
 
+        /* Header pitch */
+        .pitch { margin-top: 15px; font-size: 16px; color: #00cccc; letter-spacing: 1px; }
+
+        /* About */
+        .about-text { max-width: 800px; margin: 0 auto; text-align: center; color: #00cccc; font-size: 18px; line-height: 1.8; }
+
+        /* Experience */
+        .experience-list { max-width: 900px; margin: 0 auto; list-style: none; }
+        .experience-list li { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(0, 255, 255, 0.25); }
+        .experience-role { color: #00ffff; font-size: 18px; letter-spacing: 1px; }
+        .experience-company { color: #00cccc; font-size: 15px; margin-top: 4px; }
+        .experience-dates { color: #00cccc; font-size: 15px; white-space: nowrap; }
+
+        /* Resume */
+        .contact-links { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .contact-button { display: inline-block; padding: 15px 40px; border: 2px solid #00ffff; color: #00ffff; text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s; }
+        .contact-button:hover { background: #00ffff; color: #000; box-shadow: 0 0 30px #00ffff; }
+
         /* Footer */
         footer {
             text-align: center;
@@ -335,6 +353,8 @@
             .video-grid, .portfolio-grid { grid-template-columns: 1fr; }
             .logo-container { width: 200px; height: 200px; }
             .initials { font-size: 48px; }
+            .experience-list li { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .about-text { font-size: 16px; }
         }
     </style>
 </head>
@@ -347,14 +367,23 @@
                 <div class="initials">FP</div>
             </div>
             <h1>Ferenc Paczka</h1>
-            <p class="tagline">Digital Artist | Photo Retoucher | AI Developer</p>
+            <p class="tagline">Senior Image Specialist | iOS &amp; macOS Developer</p>
+            <p class="pitch">I ship native Apple apps and production-grade images.</p>
         </header>
 
         <nav>
+            <a href="#about">About</a>
             <a href="#ai-commercial">AI Commercial Production</a>
             <a href="#ios-apps">iOS &amp; macOS Apps</a>
             <a href="#photo-retouching">Photo Retouching</a>
+            <a href="#experience">Experience</a>
         </nav>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">Senior image specialist with over 10 years of retouching, compositing, and color work for brands including RH, Levi's, and Gap. I design, build, and ship native iPhone and Mac apps with AI-assisted development in Claude Code, and I advise companies on AI-powered search and data access systems. Images or code, nothing ships until every detail checks out.</p>
+        </section>
 
         <!-- AI Commercial Production -->
         <section id="ai-commercial" class="section">
@@ -506,8 +535,31 @@
             </div>
         </section>
 
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <ul class="experience-list">
+                <li><div><div class="experience-role">AI Consultant</div><div class="experience-company">Grupo Knobloch, Mexico City</div></div><span class="experience-dates">Sept 2026 to Present</span></li>
+                <li><div><div class="experience-role">Photo Retoucher</div><div class="experience-company">Black Cat Studio, Novato, CA</div></div><span class="experience-dates">2025 to Present</span></li>
+                <li><div><div class="experience-role">Independent App Developer</div><div class="experience-company">Self-employed, San Francisco, CA</div></div><span class="experience-dates">Sept 2024 to Present</span></li>
+                <li><div><div class="experience-role">Production Artist / Photo Retoucher</div><div class="experience-company">RH (Restoration Hardware), Corte Madera, CA</div></div><span class="experience-dates">2016 to 2024</span></li>
+                <li><div><div class="experience-role">Freelance Retoucher</div><div class="experience-company">SF Digital Studio &amp; Corey Lesh Studio, San Francisco, CA</div></div><span class="experience-dates">2013 to 2016</span></li>
+                <li><div><div class="experience-role">Creative Instructor</div><div class="experience-company">Art Institute of California, Sunnyvale, CA</div></div><span class="experience-dates">2011 to 2013</span></li>
+                <li><div><div class="experience-role">Creative Workshop Leader</div><div class="experience-company">Apple Store, San Francisco Bay Area, CA</div></div><span class="experience-dates">2008 to 2013</span></li>
+            </ul>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="section">
+            <h2 class="section-title">Resume</h2>
+            <div class="contact-links">
+                <a href="Ferenc_Paczka_Resume.pdf" class="contact-button" download>Download Resume (PDF)</a>
+                <a href="https://www.linkedin.com/in/ferencpaczka" class="contact-button" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </section>
+
         <footer>
-            <p>&copy; 2026 Ferenc Paczka | Digital Artist | Photo Retoucher | AI Developer</p>
+            <p>&copy; 2026 Ferenc Paczka | Senior Image Specialist | iOS &amp; macOS Developer</p>
             <p style="margin-top: 10px; font-size: 14px;">BFA Academy of Art University SF | BFA La Esmeralda México</p>
         </footer>
     </div>
