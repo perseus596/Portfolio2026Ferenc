@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Ferenc Paczka | Senior Image Specialist | iOS & macOS Developer</title>
+    <title>Ferenc Paczka | iOS Developer | Retoucher | AI Consultant</title>
     <style>
         :root {
             --accent: #E6E6E6;
@@ -208,7 +208,9 @@
             transition: all 0.3s;
             box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2);
             text-decoration: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .ios-app-card:hover {
@@ -246,6 +248,7 @@
             letter-spacing: 1px;
             font-size: 12px;
             transition: all 0.3s;
+            margin-top: auto;
         }
 
         .ios-app-card:hover .app-store-badge {
@@ -253,6 +256,10 @@
             color: #000;
             box-shadow: 0 0 30px var(--accent);
         }
+
+        .ios-app-card.coming-soon { opacity: 0.5; cursor: default; }
+        .ios-app-card.coming-soon:hover { transform: none; box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.2); }
+        .coming-soon-icon { border: 2px dashed var(--accent-dim); box-shadow: none; }
 
         /* Portfolio Grid */
         .portfolio-grid {
@@ -373,14 +380,14 @@
                 <div class="initials">FP</div>
             </div>
             <h1>Ferenc Paczka</h1>
-            <p class="tagline">Senior Image Specialist | iOS &amp; macOS Developer</p>
+            <p class="tagline">iOS Developer | Retoucher | AI Consultant</p>
             <p class="pitch">I ship native Apple apps and production-grade images.</p>
         </header>
 
         <nav>
             <a href="#about">About</a>
-            <a href="#ai-commercial">AI Commercial Production</a>
             <a href="#ios-apps">iOS &amp; macOS Apps</a>
+            <a href="#ai-commercial">AI Commercial Production</a>
             <a href="#photo-retouching">Photo Retouching</a>
             <a href="#experience">Experience</a>
         </nav>
@@ -388,44 +395,7 @@
         <!-- About -->
         <section id="about" class="section">
             <h2 class="section-title">About</h2>
-            <p class="about-text">Senior image specialist with over 10 years of retouching, compositing, and color work for brands including RH, Levi's, and Gap. I design, build, and ship native iPhone and Mac apps with AI-assisted development in Claude Code, and I advise companies on AI-powered search and data access systems. Images or code, nothing ships until every detail checks out.</p>
-        </section>
-
-        <!-- AI Commercial Production -->
-        <section id="ai-commercial" class="section">
-            <h2 class="section-title">AI Commercial Production</h2>
-            <div class="video-grid">
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/GwAEw62Z1eY" 
-                                title="Mezcal Chito Runaway Truck"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Mezcal Chito - Runaway Truck</div>
-                </div>
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/itoPTpd4Fms" 
-                                title="Mezcal Chito Ad #3"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Mezcal Chito Ad #3</div>
-                </div>
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/Rp8ZGo_la-w" 
-                                title="Mezcal Chito Ad #4a"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <div class="video-title">Mezcal Chito Ad #4a</div>
-                </div>
-            </div>
+            <p class="about-text">I build native iPhone and Mac apps with AI-assisted development in Claude Code, backed by over 10 years of retouching, compositing, and color work for brands including RH, Levi's, and Gap. I also advise companies on AI-powered search and data access systems. Images or code, nothing ships until every detail checks out.</p>
         </section>
 
         <!-- iOS Apps -->
@@ -462,6 +432,55 @@
                     <p>Mac security monitor that watches network threats, your GitHub repositories, and App Store listings for clones.</p>
                     <span class="app-store-badge">Get It at HermesHarpe.com</span>
                 </a>
+                <div class="ios-app-card coming-soon">
+                    <div class="ios-app-icon coming-soon-icon"></div>
+                    <h3>Coming Soon for iOS</h3>
+                </div>
+                <div class="ios-app-card coming-soon">
+                    <div class="ios-app-icon coming-soon-icon"></div>
+                    <h3>Coming Soon for iOS</h3>
+                </div>
+                <div class="ios-app-card coming-soon">
+                    <div class="ios-app-icon coming-soon-icon"></div>
+                    <h3>Coming Soon for iOS</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Commercial Production -->
+        <section id="ai-commercial" class="section">
+            <h2 class="section-title">AI Commercial Production</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/GwAEw62Z1eY" 
+                                title="Mezcal Chito Runaway Truck"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-title">Mezcal Chito - Runaway Truck</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/itoPTpd4Fms" 
+                                title="Mezcal Chito Ad #3"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-title">Mezcal Chito Ad #3</div>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Rp8ZGo_la-w" 
+                                title="Mezcal Chito Ad #4a"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-title">Mezcal Chito Ad #4a</div>
+                </div>
             </div>
         </section>
 
@@ -560,12 +579,13 @@
             <h2 class="section-title">Resume</h2>
             <div class="contact-links">
                 <a href="Ferenc_Paczka_Resume.pdf" class="contact-button" download>Download Resume (PDF)</a>
+                <a href="Ferenc_Paczka_Curriculum_Espanol.pdf" class="contact-button" download lang="es">Descargar CV en Español (PDF)</a>
                 <a href="https://www.linkedin.com/in/ferencpaczka" class="contact-button" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 Ferenc Paczka | Senior Image Specialist | iOS &amp; macOS Developer</p>
+            <p>&copy; 2026 Ferenc Paczka | iOS Developer | Retoucher | AI Consultant</p>
             <p style="margin-top: 10px; font-size: 14px;">BFA Academy of Art University SF | BFA La Esmeralda México</p>
         </footer>
     </div>
